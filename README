@@ -1,0 +1,7 @@
+Simple distributed GA example using Celery
+
+ga_defs.py -> definitions for the ga, the evaluation function is in the domain class, notice it sleeps for some time as a placeholder for significant computation
+
+ga.py -> really simplistic genetic algorithm, the eval_concurrent flag determines whether genomes are evaluated sequentially or concurrently by celery
+
+celeryconfig.py -> default config for celery, uses ampq backend and imports the task fromg a_defs.py
